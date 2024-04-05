@@ -1,0 +1,91 @@
+/* Bu CSS dökümantasyonu Emrah KAHRAMAN tarafından kodlanmıştır. */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --base_color: #ffffff;
+  --bg_color: #eff6f3;
+  --one_color: #2d2e2e;
+  --two_color: #3a4f39;
+  --three_color: #ffffff;
+  --one_family: "Inter", sans-serif;
+  --two_family: "Open Sans", sans-serif;
+  --large_size: 16px;
+  --regular_size: 14px;
+}
+
+body {
+  background-color: var(--base_color);
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-size: var(--large_size);
+  font-family: var(--one_family, --two_family);
+  color: var(--one_color);
+}
+
+/*Counters#*/
+#counters {
+  width: 100%;
+  background-color: var(--bg_color);
+
+  /*Large*/
+  @media screen and (max-width: 1200px) {
+    padding: 100px 0 70px 0;
+  }
+
+  /*counters*/
+  .counters {
+    /*counters_item*/
+    & .counters_item {
+      display: flex;
+      align-items: center;
+
+      /*counters_item_count*/
+      & .counters_item_count {
+        .counter {
+          font-family: var(--one_family);
+          font-weight: 600;
+          font-size: 50px;
+          color: var(--one_color);
+        }
+      }
+
+      /*counters_item_desc*/
+      & .counters_item_desc {
+        padding-left: 24px;
+        p {
+          font-family: var(--one_family);
+          color: var(--one_color);
+          font-weight: 400;
+          line-height: 22px;
+          font-size: var(--large_size);
+          letter-spacing: -0.9px;
+        }
+      }
+
+      /*Large*/
+      @media screen and (max-width: 1200px) {
+        margin-bottom: 30px;
+      }
+      /*Tablet*/
+      @media screen and (max-width: 768px) {
+        /*counters_item_desc*/
+        & .counters_item_desc {
+          padding-left: 20px;
+          p {
+            font-size: var(--regular_size);
+            line-height: 18px;
+            letter-spacing: -0.5px;
+          }
+        }
+      }
+    }
+  }
+}
