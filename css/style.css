@@ -34,6 +34,7 @@ body {
 #counters {
   width: 100%;
   background-color: var(--bg_color);
+  padding: 100px 0 100px 0;
 
   /*Large*/
   @media screen and (max-width: 1200px) {
